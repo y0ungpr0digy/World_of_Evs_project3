@@ -1,2 +1,3 @@
 # World_of_Evs_project3
-I housed the data for my project using mongo-db :D
+The data for my project is housed by using mongo-db :D
+ I enjoyed every frustrating moment with no regrets.
