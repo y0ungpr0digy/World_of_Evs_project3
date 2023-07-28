@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sales by Region</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+  <h1> Welcome to the World of Ev's. For this project I go over the statistics of Ev Sales by Regions, the increase of sales throughtout the years, aswell as showing the top 5 countries in Ev productions<h1>
+  <div id="plot"></div>
+  <div id="myPlot" style="width:100%;max-width:700px"></div>
+  <h3> Here we have the Yearly growth. As you can see Ev's Got popular around 2020. Conversely, as the price drops supply constricts while demand grows. Resulting in more people in Ev's theyre alot more popular on the west coast here in the U.S. Top companies that will make the biggest change are possibly Tesla, Lucid and Rivian <h3>
+  <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+  <script src="data.js"></script>
+  <script src="plot.js"></script>
+  <h2> Here we can see the top performer growth. It's no surprise that China is number 1. Their technology has always been ahead of our time. As for all of Europe they're masters in the art of engineering. As the U.S starts to come out with more EV companies.We'll slowly increase our numbers yearly. This may take some time as americans prefer the sound of an exhaust and thrill of gasoline. There's also environmental dangers towards owning an EV. <h2>
+  <script src="scatter.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+
+  <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+  <script>
+    var xValues = ["China", "Europe", "Germany", "USA", "United Kingdom"]
+    var yValues = [1500000, 880000, 310000, 65000, 23000]
+    var barColors = [
+      "#b91d47",
+      "#00aba9",
+      "#2b5797",
+      "#e8c3b9",
+      "#1e7145"
+    ];
+
+    new Chart("myChart", {
+      type: "pie",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Top 5 Performing Regions (EV sales) "
+        }
+      }
+    });
+  </script>
+
+
+  <!-- Load plotly.js into the DOM -->
+  <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+</body>
+
+</html>
